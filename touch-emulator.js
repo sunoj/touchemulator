@@ -292,9 +292,14 @@
     /**
      * TouchEmulator initializer
      */
-    function TouchEmulator() {
-        if (hasTouchSupport()) {
-            return;
+    function TouchEmulator(options = {}) {
+        var touchSupport = hasTouchSupport()
+
+        if (touchSupport) {
+            if (!options.force) return {
+                success: false,
+                touchSupport: touchSupport
+            };
         }
 
         fakeTouchSupport();
@@ -313,11 +318,15 @@
         window.addEventListener("touchmove", showTouches, true);
         window.addEventListener("touchend", showTouches, true);
         window.addEventListener("touchcancel", showTouches, true);
+
+        return {
+            success: true,
+            touchSupport: touchSupport
+        };
     }
 
     // start distance when entering the multitouch mode
     TouchEmulator.multiTouchOffset = 75;
-    
     // tags that shouldn't swallow mouse events
     TouchEmulator.ignoreTags = ['TEXTAREA', 'INPUT', 'SELECT'];
 

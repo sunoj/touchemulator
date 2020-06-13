@@ -1,5 +1,5 @@
 {
-  "name": "hammer-touchemulator",
+  "name": "@sunoj/touchemulator",
   "version": "0.0.2",
   "description": "Emulate touch input on your desktop.",
   "main": "touch-emulator.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hammerjs/touchemulator"
+    "url": "https://github.com/sunoj/touchemulator"
   },
   "keywords": [
     "touch",
@@ -20,10 +20,10 @@
     "emulator",
     "simulator"
   ],
-  "author": "Jorik Tangelder <j.tangelder@gmail.com>",
+  "author": "Jorik Tangelder <j.tangelder@gmail.com>, Ming <ming@tiny.group>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hammerjs/touchemulator/issues"
+    "url": "https://github.com/sunoj/touchemulator/issues"
   },
-  "homepage": "https://github.com/hammerjs/touchemulator"
+  "homepage": "https://github.com/sunoj/touchemulator"
 }
